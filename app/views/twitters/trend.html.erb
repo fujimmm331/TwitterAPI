@@ -1,8 +1,8 @@
 <h1>トレンドを表示する</h1>
 
-<% 10.times do |i|%>
+<% @trends.each_with_index do |trend, i|%>
 <div>
   <p><%=i +1%>位</p>
-  <p>ほげほげ</p>
+  <p><%= link_to trend[:name],trend[:url], target: :_blank %></p>
 </div>
 <%end%>
