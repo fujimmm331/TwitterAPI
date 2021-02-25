@@ -6,6 +6,6 @@ class TwittersController < ApplicationController
       config.access_token        = ENV["TWITTER_ACCESS_TOKEN"]
       config.access_token_secret = ENV["TWITTER_ACCESS_SECRET_TOKEN"]
     end
-    @trends = client.trends.attrs[:trends].first(10)
+    @trends = client.trends(id = 23424856).attrs[:trends].first(10)
   end
 end
